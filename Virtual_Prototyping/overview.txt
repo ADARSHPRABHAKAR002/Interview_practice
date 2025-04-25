@@ -1,0 +1,70 @@
+Interface: communication , top level thing used communie with module, all the declaration all functions
+
+
+Port: in , out inout communie though 
+
+
+channel: the implimetation of interface
+
+
+signal: also a channle(primitive channel)
+
+
+export: port which has interface attach to it. it should be connected to the channel
+
+
+sensitivity: trigger the processes to execute
+
+
+socket: containes a port and export, 
+
+
+TLM: trasaction level modeleing(uses function call) moved to TLM 2.0 generic payload
+
+
+IP : subsystem 
+
+
+
+generic payload:  interoperability (char value)
+
+
+methods: faster than thread, sequential run ( can't use thread)
+
+
+threads: based the wait() suspend
+
+
+modules: 
+
+
+wait:
+
+
+loosely timed: 
+
+
+time accurate: notify()
+
+
+
+
+
+
+abstract class - at least one vertual function
+virtual 
+
+
+What is a Mutex in C++?
+
+A mutex (short for "mutual exclusion") is a synchronization primitive that is used to protect shared resources in a multithreaded program. It ensures that only one thread
+can access the shared resource at a time, preventing race conditions and ensuring data consistency.
+
+problems
+Race Conditions:
+Multiple threads modify shared data simultaneously, resulting in undefined or inconsistent behavior.
+
+Data Corruption:
+Threads overwrite each other's changes, corrupting the shared data.
+
+dead locks
