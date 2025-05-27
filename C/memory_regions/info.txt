@@ -17,3 +17,4 @@ A typical C program's memory is divided into the following regions:
 +------------------+
 |      Code        |   Instructions, constants, read-only data
 +------------------+
+

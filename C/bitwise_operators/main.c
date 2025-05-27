@@ -1,18 +1,18 @@
-#include<stdio.h>
-// #include <stdint.h> 
-// uint64_t swap_odd_even_bits(uint64_t number);
-int main()
-{
-    unsigned long long number = 0x6789ABCDEF;
+// #include<stdio.h>
+// // #include <stdint.h> 
+// // uint64_t swap_odd_even_bits(uint64_t number);
+// int main()
+// {
+//     unsigned long long number = 0x6789ABCDEF;
 
-    printf("Original: 0x%X\n", number);
-
-
+//     printf("Original: 0x%X\n", number);
 
 
-    return 0;
 
-}
+
+//     return 0;
+
+// }
 
 
 
@@ -222,3 +222,24 @@ int main()
 // Reversing the Bits of a Number:
 
 // Use shifts and masks to reverse the binary representation of a number.
+
+#include<stdio.h>
+int main()
+{
+    int num = 0x1122AABB;
+    // int forth = (num & 0xFF)<<16;
+    // int third = (num & 0x0000FF00)<<16;
+    int second = (num & 0x0000FFFF)<<16;
+    int first = (num & 0xFFFF0000)>>16;
+
+    // printf("%08X\n",forth);
+    // printf("%08X\n",third);
+    printf("%08X\n",second);
+    printf("%08X\n",first);
+
+    int result = ( (first) | (second) );
+
+    printf("%X",result);
+
+    return 0;
+}

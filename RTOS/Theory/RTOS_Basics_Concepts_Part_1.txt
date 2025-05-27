@@ -1,0 +1,53 @@
+System
+A system is a process or collection of processes and it does certain clearly defined objectives in an apparently independent way.
+
+
+
+Operating System
+    An operating system is a set of programs, designed to manage all the resources of the computer. 
+In other words, a set of programs that acts as an intermediary between a user of a computer and the computer hardware.
+    Memory, I/O devices, communication devices, etc. are the hardware resources of the computer. 
+File systems, virtual memory, security, etc. are software resources. Now a set of programs 
+that are used to manage all these resources is called an operating system.
+
+
+
+Functions of Operating Systems
+The main functions of an operating system are as follows:
+    1. Process management
+    2. Memory management
+    3. Secondary storage management
+    4. I/O management
+    5. File management
+    6. Protection
+    7. Networking management
+    8. Command Interpretation
+
+
+Four main tasks of OS
+    1. Process Management
+        Process creation
+        Process loading
+        Process execution control
+        Interaction of the process with signal events
+        Process monitoring
+        CPU allocation
+        Process termination
+    2. Inter-process Communication
+        Synchronization and coordination
+        Deadlock detection
+        Process Protection
+        Data Exchange Mechanisms
+    3. Memory Management
+        Services for file creation, deletion, repositioning, and protection
+    4. Input / Output Management
+        Handles requests and releases subroutines for a variety of peripherals and read, write, and reposition programs
+
+
+Types of OS
+    1. Batch Processing
+    2. Time Sharing
+    3. Real-time Operating Systems
+    4. Embedded OS
+
+

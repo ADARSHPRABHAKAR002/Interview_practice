@@ -4,43 +4,43 @@
 // that operate on the data. It allows the implementation of object-oriented programming (OOP) principles such as encapsulation, 
 // abstraction, inheritance, and polymorphism.
 
-#include <iostream>
-using namespace std;
-class Person
-{
-private:
-    int age;
-    string name;
-public:
-    // defual constructor
-    Person(){
-        name = "unknown";
-        age = 0;
-        std::cout << "default constructor, person name " << name << " and age " << age << std::endl;
-    }
+// #include <iostream>
+// using namespace std;
+// class Person
+// {
+// private:
+//     int age;
+//     string name;
+// public:
+//     // defual constructor
+//     Person(){
+//         name = "unknown";
+//         age = 0;
+//         std::cout << "default constructor, person name " << name << " and age " << age << std::endl;
+//     }
 
-    //parametrized constructor
-    Person(string name, int age){
-        this->name = name;
-        this->age = age;
-        std::cout << "parameterized constructor " << name << age << std::endl;
-    }
+//     //parametrized constructor
+//     Person(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//         std::cout << "parameterized constructor " << name << age << std::endl;
+//     }
 
-    //copy constructor
-    Person(const Person &person){
-        name = person.name;
-        age = person.age;
-        std::cout << "copy concstrctor " << name << age << std::endl;
-    }
-    ~Person(){
-        std::cout << " default destructor" << name << age << std::endl;
-    }
+//     //copy constructor
+//     Person(const Person &person){
+//         name = person.name;
+//         age = person.age;
+//         std::cout << "copy concstrctor " << name << age << std::endl;
+//     }
+//     ~Person(){
+//         std::cout << " default destructor" << name << age << std::endl;
+//     }
 
-    //methods
-    void display() {
-        cout << "Name: " << name << ", Age: " << age << endl;
-    }
-};
+//     //methods
+//     void display() {
+//         cout << "Name: " << name << ", Age: " << age << endl;
+//     }
+// };
 
 // int main()
 // {
@@ -75,42 +75,42 @@ public:
 
 //Constructor and Destructor with Dynamic Memory
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class dynamic_array{
-    private:
-        int size;
-        int *arr;
+// class dynamic_array{
+//     private:
+//         int size;
+//         int *arr;
     
-    public:
-        dynamic_array(int size){
-            this->size = size;
-            arr = new int(size);
-            for(int i=0; i<size; i++){
-                arr[i] = i+1;
-            }
-        }
+//     public:
+//         dynamic_array(int size){
+//             this->size = size;
+//             arr = new int(size);
+//             for(int i=0; i<size; i++){
+//                 arr[i] = i+1;
+//             }
+//         }
 
-        void display(){
-            for(int i=0; i<size; i++){
-                cout << "array["<<i<<"] = " << arr[i] << endl;
-            }
-        }
+//         void display(){
+//             for(int i=0; i<size; i++){
+//                 cout << "array["<<i<<"] = " << arr[i] << endl;
+//             }
+//         }
 
-        ~dynamic_array(){
-            delete[] arr;
-            cout << "dynamic memory if deallocated " << endl;
-        }
-};
-int main()
-{
-    dynamic_array d1(5);
+//         ~dynamic_array(){
+//             delete[] arr;
+//             cout << "dynamic memory if deallocated " << endl;
+//         }
+// };
+// int main()
+// {
+//     dynamic_array d1(5);
 
-    d1.display();
+//     d1.display();
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,28 +132,28 @@ int main()
 
 // Default destructors are sufficient for non-polymorphic classes, where the class is not part of an inheritance hierarchy.
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Base {
-public:
-    ~Base() {  // Default destructor
-        cout << "Base destructor called." << endl;
-    }
-};
+// class Base {
+// public:
+//     ~Base() {  // Default destructor
+//         cout << "Base destructor called." << endl;
+//     }
+// };
 
-class Derived : public Base {
-public:
-    ~Derived() {  // Default destructor
-        cout << "Derived destructor called." << endl;
-    }
-};
+// class Derived : public Base {
+// public:
+//     ~Derived() {  // Default destructor
+//         cout << "Derived destructor called." << endl;
+//     }
+// };
 
-int main() {
-    Base* obj = new Derived();  // Base pointer pointing to Derived object
-    delete obj;  // Destructor for Derived won't be called
-    return 0;
-}
+// int main() {
+//     Base* obj = new Derived();  // Base pointer pointing to Derived object
+//     delete obj;  // Destructor for Derived won't be called
+//     return 0;
+// }
 
 
 // not cleaning up the derived class (adavntage of the vitual destructor)
@@ -178,31 +178,116 @@ int main() {
 // Virtual destructors are required for polymorphic base classes to ensure proper destruction of derived class objects.
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Base {
-public:
-    virtual ~Base() {  // Virtual destructor
-        cout << "Base destructor called." << endl;
-    }
-};
+// class Base {
+// public:
+//     virtual ~Base() {  // Virtual destructor
+//         cout << "Base destructor called." << endl;
+//     }
+// };
 
-class Derived : public Base {
-public:
-    ~Derived() {  // Virtual destructor
-        cout << "Derived destructor called." << endl;
-    }
-};
+// class Derived : public Base {
+// public:
+//     ~Derived() {  // Virtual destructor
+//         cout << "Derived destructor called." << endl;
+//     }
+// };
 
-int main() {
-    Base* obj = new Derived();  // Base pointer pointing to Derived object
-    delete obj;  // Correctly destroys both Derived and Base
-    return 0;
-}
+// int main() {
+//     Base* obj = new Derived();  // Base pointer pointing to Derived object
+//     delete obj;  // Correctly destroys both Derived and Base
+//     return 0;
+// }
 
 
 // Output:
 
 // Derived destructor called.
 // Base destructor called.
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// program to maintain the colleage library
+
+#include <iostream>
+using namespace std;
+
+struct stdDtl
+{
+    int id;
+    char* name;
+    char* year;
+    char* sem;
+    char* section;
+    float libDues = 0;
+    struct StdbookList* prt;
+};
+
+
+struct StdBook{
+    char* bookName;
+    char* authName;
+    StdBook* next;
+};
+
+
+struct StdbookList{
+    int numBook = 0;
+    StdBook* head;
+
+};
+
+struct Library
+{
+    char* libraryName;
+    bookSection* secPtr;
+};
+
+struct bookSection{
+    char* secName;
+    bookDlt* bookDltHeadptr;
+
+};
+
+struct bookDlt{
+    int bookId;
+    char* nameBook;
+    char* nameAuth;
+    bookDlt* next;
+    int copies;
+};
+
+
+class JnnceLibrary{
+    private:
+        stdDtl* std;
+        StdbookList* book;
+        StdBook* b;
+
+    public:
+        JnnceLibrary(){
+            cout << "WelCome to the JNNCE Library Maintainance \n" << endl;
+        }
+
+        ~JnnceLibrary()
+        {
+            //implement;
+        }
+
+        bool addStudent(int id, char* name, char* year, char* sem, char* section);
+        bool addBookToStd(char* bookName, char* authName);
+
+        bool addLibrary(char* libraryName);
+        
+
+
+
+
+
+
+};
+
+

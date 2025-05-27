@@ -20,7 +20,7 @@
 // Characteristics:
 //      Divided into two parts:
 //          Read-Only Data: Contains constants (e.g., const int).
-//          Writable Data: Global and static variables explicitly initialized at compile time.
+//          Writable Data: Global and static variables explicitly initialized at compile time(initialized only once).
 //       Modifiable (except for constants).
 // Lifetime: Exists throughout the entire execution of the program.
 
