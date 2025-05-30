@@ -27,6 +27,13 @@
 //     return 0;
 // }
 
+// structure padding and packing
+// Structure padding and packing are techniques used by compilers to manage memory within structures in programming 
+// languages like C and C++. Padding is the addition of extra bytes to a structure to ensure its members are aligned
+// on memory boundaries that are efficient for the processor. Packing, on the other hand, is the process of minimizing 
+// or eliminating this padding, resulting in a more compact structure in memory. 
+// __attribute__((packed))
+
 // 2. union
 
 // A union is similar to a struct, but in a union, all members share the same memory location. 
